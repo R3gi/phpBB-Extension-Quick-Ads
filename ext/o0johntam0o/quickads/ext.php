@@ -10,11 +10,13 @@
 
 namespace o0johntam0o\quickads;
 
+use phpbb\extension\base;
+
 /**
 * @ignore
 */
 
-class ext extends \phpbb\extension\base
+class ext extends base
 {
 	
 }

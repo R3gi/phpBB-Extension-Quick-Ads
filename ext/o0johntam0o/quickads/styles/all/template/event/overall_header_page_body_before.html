@@ -1,8 +1,8 @@
 <!-- IF (S_IS_BOT and S_QUICK_ADS_ALLOW_BOT) or not S_IS_BOT -->
 <!-- IF S_QUICK_ADS_TOP_STATIC -->
-<div class="panel" id="quick_ads_ts" style="z-index:{S_QUICK_ADS_ZINDEX}; margin-top:5px;">
+<div class="panel" id="quick_ads_ts" style="z-index:{S_QUICK_ADS_ZINDEX};">
 	<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
-	<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_ts', '#quick_ads_ts'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+	<div class="quickads_closebt icon fa-close fa-fw" onclick="quickAds_Close('#quick_ads_ts', '#quick_ads_ts'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 	<!-- ENDIF -->
 	
 	<div class="inner" style="overflow: hidden;">
@@ -10,9 +10,9 @@
 			<tbody>
 				<tr>
 					<!-- BEGIN quick_ads_row_top_static -->
-					<td valign="middle" class="quickads_items_border{quick_ads_row_top_static.QUICK_ADS_BORDER}">
+					<td class="quickads_items_border{quick_ads_row_top_static.QUICK_ADS_BORDER}" style="vertical-align: middle">
 						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
-						<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 						<!-- ENDIF -->
 						
 						<div id="quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}" class="quickads_items quickads_items_top_static" style="background-color: {quick_ads_row_top_static.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_top_static.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_top_static.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_top_static.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_top_static.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_top_static.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_top_static.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_top_static.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_top_static.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_top_static.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>

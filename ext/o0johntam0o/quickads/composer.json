@@ -1,9 +1,9 @@
 {
 	"name": "o0johntam0o/quickads",
 	"type": "phpbb-extension",
-	"description": "Append any Ads, HTML, jQuery/JS code into your forum quickly.",
-	"homepage": "https://github.com/o0johntam0o/phpBB-Extension-Quick-Ads",
-	"version": "2.0.0",
+	"description": "Append any Ads, HTML, jQuery/JS code into your forum quickly. Fork of o0johntam0o's Quick Ads extension.",
+	"homepage": "https://github.com/R3gi/phpBB-Extension-Quick-Ads-Reloaded",
+	"version": "2.1.0",
 	"keywords": [
 		"o0johntam0o",
 		"extension",
@@ -19,8 +19,10 @@
 			"role": "Lead Developer"
 		},
 		{
-			"name": "Contributors",
-			"homepage": "https://github.com/o0johntam0o/phpBB-Extension-Quick-Ads/graphs/contributors"
+			"name": "R3gi",
+			"email": "regiprogi@gmail.com",
+			"homepage": "https://github.com/R3gi",
+			"role": "Developer"
 		}
 	],
 	"require": {
@@ -31,14 +33,9 @@
 		"phpbb/epv": "dev-master"
 	},
 	"extra": {
-		"display-name": "Quick Ads",
+		"display-name": "Quick Ads Reloaded",
 		"soft-require": {
-			"phpbb/phpbb": ">=3.1.0,<3.2.*@dev"
-		},
-		"version-check": {
-			"host": "www.phpbb.com",
-			"directory": "/customise/db/extension/quickads",
-			"filename": "version_check"
+			"phpbb/phpbb": ">=3.1.0"
 		}
 	}
 }

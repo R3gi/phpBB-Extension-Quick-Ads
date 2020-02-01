@@ -10,14 +10,17 @@
 
 namespace o0johntam0o\quickads\controller;
 
+use phpbb\controller\helper;
+use phpbb\template\template;
+
 class main
 {
-	/** @var \phpbb\controller\helper */
+	/** @var helper */
 	protected $helper;
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 	
-	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template)
+	public function __construct(helper $helper, template $template)
 	{
 		// Formally ;)
 		$this->helper = $helper;

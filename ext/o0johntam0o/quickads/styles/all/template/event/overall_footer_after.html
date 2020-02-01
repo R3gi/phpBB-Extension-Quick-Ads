@@ -2,16 +2,16 @@
 	<!-- IF S_QUICK_ADS_LEFT -->
 	<div id="quick_ads_l" class="quickads_frames quickads_frames_left" style="z-index:{S_QUICK_ADS_ZINDEX};">
 		<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
-		<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_l', '#quick_ads_l'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+		<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_l', '#quick_ads_l'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 		<!-- ENDIF -->
 		
 		<table class="quickads_table">
 			<tbody>
 				<!-- BEGIN quick_ads_row_left -->
 				<tr>
-					<td align="center" class="quickads_items_border{quick_ads_row_left.QUICK_ADS_BORDER}">
+					<td class="quickads_items_border{quick_ads_row_left.QUICK_ADS_BORDER}" style="text-align: center;">
 						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
-						<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 						<!-- ENDIF -->
 						
 						<div id="quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}" class="quickads_items quickads_items_left" style="background-color: {quick_ads_row_left.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_left.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_left.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_left.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_left.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_left.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_left.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_left.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_left.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_left.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>
@@ -19,11 +19,11 @@
 						</div>
 						
 						<!-- IF S_QUICK_ADS_COOKIE -->
-						<script type="text/javascript">
+						<script>
 						/* <![CDATA[ */
-						jQuery(document).ready(function()
+						$(document).ready(function()
 						{
-							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}', jQuery('#quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}')[0].parentNode);
+							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}', $('#quick_ads_i{quick_ads_row_left.QUICK_ADS_ID}')[0].parentNode);
 						});
 						/* ]]> */
 						</script>
@@ -35,12 +35,12 @@
 		</table>
 	</div>
 	
-	<script type="text/javascript">
+	<script>
 	/* <![CDATA[ */
-	jQuery(document).ready(function()
+	$(document).ready(function()
 	{
 		<!-- IF S_QUICK_ADS_COOKIE -->
-		quickAds_CheckCookie('#quick_ads_l', jQuery('#quick_ads_l')[0]);
+		quickAds_CheckCookie('#quick_ads_l', $('#quick_ads_l')[0]);
 		<!-- ENDIF -->
 		quickAds_CheckDimension('#quick_ads_l', {S_QUICK_ADS_WMIN_LEFT}, {S_QUICK_ADS_HMIN_LEFT});
 	});
@@ -51,15 +51,15 @@
 	<!-- IF S_QUICK_ADS_RIGHT -->
 	<div id="quick_ads_r" class="quickads_frames quickads_frames_right" style="z-index:{S_QUICK_ADS_ZINDEX};">
 		<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
-		<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_r', '#quick_ads_r'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+		<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_r', '#quick_ads_r'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 		<!-- ENDIF -->
 		<table class="quickads_table">
 			<tbody>
 				<!-- BEGIN quick_ads_row_right -->
 				<tr>
-					<td align="center" class="quickads_items_border{quick_ads_row_right.QUICK_ADS_BORDER}">
+					<td class="quickads_items_border{quick_ads_row_right.QUICK_ADS_BORDER}" style="text-align: center;">>
 						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
-						<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 						<!-- ENDIF -->
 						
 						<div id="quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}" class="quickads_items quickads_items_right" style="background-color: {quick_ads_row_right.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_right.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_right.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_right.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_right.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_right.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_right.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_right.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_right.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_right.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>
@@ -67,11 +67,11 @@
 						</div>
 						
 						<!-- IF S_QUICK_ADS_COOKIE -->
-						<script type="text/javascript">
+						<script>
 						/* <![CDATA[ */
-						jQuery(document).ready(function()
+						$(document).ready(function()
 						{
-							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}', jQuery('#quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}')[0].parentNode);
+							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}', $('#quick_ads_i{quick_ads_row_right.QUICK_ADS_ID}')[0].parentNode);
 						});
 						/* ]]> */
 						</script>
@@ -83,12 +83,12 @@
 		</table>
 	</div>
 	
-	<script type="text/javascript">
+	<script>
 	/* <![CDATA[ */
-	jQuery(document).ready(function()
+	$(document).ready(function()
 	{
 		<!-- IF S_QUICK_ADS_COOKIE -->
-		quickAds_CheckCookie('#quick_ads_r', jQuery('#quick_ads_r')[0]);
+		quickAds_CheckCookie('#quick_ads_r', $('#quick_ads_r')[0]);
 		<!-- ENDIF -->
 		quickAds_CheckDimension('#quick_ads_r', {S_QUICK_ADS_WMIN_RIGHT}, {S_QUICK_ADS_HMIN_RIGHT});
 	});
@@ -99,15 +99,15 @@
 	<!-- IF S_QUICK_ADS_TOP -->
 	<div id="quick_ads_t" class="quickads_frames quickads_frames_top" style="z-index:{S_QUICK_ADS_ZINDEX};">
 		<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
-		<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_t', '#quick_ads_t'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+		<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_t', '#quick_ads_t'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 		<!-- ENDIF -->
 		<table class="quickads_table">
 			<tbody>
 				<tr>
 					<!-- BEGIN quick_ads_row_top -->
-					<td valign="middle" class="quickads_items_border{quick_ads_row_top.QUICK_ADS_BORDER}">
+					<td class="quickads_items_border{quick_ads_row_top.QUICK_ADS_BORDER}" style="vertical-align: middle">
 						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
-						<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 						<!-- ENDIF -->
 						
 						<div id="quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}" class="quickads_items quickads_items_top" style="background-color: {quick_ads_row_top.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_top.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_top.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_top.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_top.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_top.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_top.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_top.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_top.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_top.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>
@@ -115,11 +115,11 @@
 						</div>
 						
 						<!-- IF S_QUICK_ADS_COOKIE -->
-						<script type="text/javascript">
+						<script>
 						/* <![CDATA[ */
-						jQuery(document).ready(function()
+						$(document).ready(function()
 						{
-							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}', jQuery('#quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}')[0].parentNode);
+							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}', $('#quick_ads_i{quick_ads_row_top.QUICK_ADS_ID}')[0].parentNode);
 						});
 						/* ]]> */
 						</script>
@@ -131,12 +131,12 @@
 		</table>
 	</div>
 	
-	<script type="text/javascript">
+	<script>
 	/* <![CDATA[ */
-	jQuery(document).ready(function()
+	$(document).ready(function()
 	{
 		<!-- IF S_QUICK_ADS_COOKIE -->
-		quickAds_CheckCookie('#quick_ads_t', jQuery('#quick_ads_t')[0]);
+		quickAds_CheckCookie('#quick_ads_t', $('#quick_ads_t')[0]);
 		<!-- ENDIF -->
 		quickAds_CheckDimension('#quick_ads_t', {S_QUICK_ADS_WMIN_TOP}, {S_QUICK_ADS_HMIN_TOP});
 	});
@@ -147,15 +147,15 @@
 	<!-- IF S_QUICK_ADS_BOTTOM -->
 	<div id="quick_ads_b" class="quickads_frames quickads_frames_bottom" style="z-index:{S_QUICK_ADS_ZINDEX};">
 		<!-- IF S_QUICK_ADS_CLOSEBT == 1 -->
-		<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_b', '#quick_ads_b'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+		<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_b', '#quick_ads_b'<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 		<!-- ENDIF -->
 		<table class="quickads_table">
 			<tbody>
 				<tr>
 					<!-- BEGIN quick_ads_row_bottom -->
-					<td valign="middle" class="quickads_items_border{quick_ads_row_bottom.QUICK_ADS_BORDER}">
+					<td class="quickads_items_border{quick_ads_row_bottom.QUICK_ADS_BORDER}" style="vertical-align: middle">
 						<!-- IF S_QUICK_ADS_CLOSEBT == 2 -->
-						<div class="quickads_closebt" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
+						<div class="quickads_closebt icon fa-close fa-f" onclick="quickAds_Close('#quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}', this.parentNode<!-- IF S_QUICK_ADS_COOKIE -->, {S_QUICK_ADS_COOKIE_TIME}<!-- ENDIF -->);"></div>
 						<!-- ENDIF -->
 						
 						<div id="quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}" class="quickads_items quickads_items_bottom" style="background-color: {quick_ads_row_bottom.QUICK_ADS_BG_COLOR}; overflow: {quick_ads_row_bottom.QUICK_ADS_OVERF}; <!-- IF quick_ads_row_bottom.QUICK_ADS_BG_IMG != '' -->background-image: url('{quick_ads_row_bottom.QUICK_ADS_BG_IMG}'); <!-- ENDIF -->width: <!-- IF quick_ads_row_bottom.QUICK_ADS_WIDTH > 0 -->{quick_ads_row_bottom.QUICK_ADS_WIDTH}px<!-- ELSE -->auto<!-- ENDIF -->; <!-- IF quick_ads_row_bottom.QUICK_ADS_HEIGHT > 0 -->height: {quick_ads_row_bottom.QUICK_ADS_HEIGHT}px<!-- ELSE -->auto<!-- ENDIF -->;"<!-- IF quick_ads_row_bottom.QUICK_ADS_HREF != '' --> onclick="window.open('{quick_ads_row_bottom.QUICK_ADS_HREF}'); return false;"<!-- ENDIF -->>
@@ -163,11 +163,11 @@
 						</div>
 						
 						<!-- IF S_QUICK_ADS_COOKIE -->
-						<script type="text/javascript">
+						<script>
 						/* <![CDATA[ */
-						jQuery(document).ready(function()
+						$(document).ready(function()
 						{
-							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}', jQuery('#quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}')[0].parentNode);
+							quickAds_CheckCookie('#quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}', $('#quick_ads_i{quick_ads_row_bottom.QUICK_ADS_ID}')[0].parentNode);
 						});
 						/* ]]> */
 						</script>
@@ -179,12 +179,12 @@
 		</table>
 	</div>
 	
-	<script type="text/javascript">
+	<script>
 	/* <![CDATA[ */
-	jQuery(document).ready(function()
+	$(document).ready(function()
 	{
 		<!-- IF S_QUICK_ADS_COOKIE -->
-		quickAds_CheckCookie('#quick_ads_b', jQuery('#quick_ads_b')[0]);
+		quickAds_CheckCookie('#quick_ads_b', $('#quick_ads_b')[0]);
 		<!-- ENDIF -->
 		quickAds_CheckDimension('#quick_ads_b', {S_QUICK_ADS_WMIN_BOTTOM}, {S_QUICK_ADS_HMIN_BOTTOM});
 	});
@@ -195,23 +195,23 @@
 	<!-- IF S_QUICK_ADS_TOP_STATIC -->
 		<!-- BEGIN quick_ads_row_top_static -->
 			<!-- IF S_QUICK_ADS_COOKIE -->
-			<script type="text/javascript">
+			<script>
 			/* <![CDATA[ */
-			jQuery(document).ready(function()
+			$(document).ready(function()
 			{
-				quickAds_CheckCookie('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}', jQuery('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}')[0].parentNode);
+				quickAds_CheckCookie('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}', $('#quick_ads_i{quick_ads_row_top_static.QUICK_ADS_ID}')[0].parentNode);
 			});
 			/* ]]> */
 			</script>
 			<!-- ENDIF -->
 		<!-- END quick_ads_row_top_static -->
 		
-		<script type="text/javascript">
+		<script>
 		/* <![CDATA[ */
-		jQuery(document).ready(function()
+		$(document).ready(function()
 		{
 			<!-- IF S_QUICK_ADS_COOKIE -->
-			quickAds_CheckCookie('#quick_ads_ts', jQuery('#quick_ads_ts')[0]);
+			quickAds_CheckCookie('#quick_ads_ts', $('#quick_ads_ts')[0]);
 			<!-- ENDIF -->
 			quickAds_CheckDimension('#quick_ads_ts', {S_QUICK_ADS_WMIN_TOP_STATIC}, {S_QUICK_ADS_HMIN_TOP_STATIC});
 		});
@@ -222,23 +222,23 @@
 	<!-- IF S_QUICK_ADS_BOTTOM_STATIC -->
 		<!-- BEGIN quick_ads_row_bottom_static -->
 			<!-- IF S_QUICK_ADS_COOKIE -->
-			<script type="text/javascript">
+			<script>
 			/* <![CDATA[ */
-			jQuery(document).ready(function()
+			$(document).ready(function()
 			{
-				quickAds_CheckCookie('#quick_ads_i{quick_ads_row_bottom_static.QUICK_ADS_ID}', jQuery('#quick_ads_i{quick_ads_row_bottom_static.QUICK_ADS_ID}')[0].parentNode);
+				quickAds_CheckCookie('#quick_ads_i{quick_ads_row_bottom_static.QUICK_ADS_ID}', $('#quick_ads_i{quick_ads_row_bottom_static.QUICK_ADS_ID}')[0].parentNode);
 			});
 			/* ]]> */
 			</script>
 			<!-- ENDIF -->
 		<!-- END quick_ads_row_bottom_static -->
 		
-		<script type="text/javascript">
+		<script>
 		/* <![CDATA[ */
-		jQuery(document).ready(function()
+		$(document).ready(function()
 		{
 			<!-- IF S_QUICK_ADS_COOKIE -->
-			quickAds_CheckCookie('#quick_ads_bs', jQuery('#quick_ads_bs')[0]);
+			quickAds_CheckCookie('#quick_ads_bs', $('#quick_ads_bs')[0]);
 			<!-- ENDIF -->
 			quickAds_CheckDimension('#quick_ads_bs', {S_QUICK_ADS_WMIN_BOTTOM_STATIC}, {S_QUICK_ADS_HMIN_BOTTOM_STATIC});
 		});
@@ -248,14 +248,14 @@
 	
 	<!-- IF S_VIEWTOPIC and S_QUICK_ADS_DENY_ADSBLOCKER -->
 		<!-- IF S_QUICK_ADS_TOTAL > 0 -->
-		<script type="text/javascript">
+		<script>
 		/* <![CDATA[ */
-		jQuery(document).ready(function()
+		$(document).ready(function()
 		{
-			if (jQuery('#quick_ads_l').height() > 20 || jQuery('#quick_ads_r').height() > 20 || jQuery('#quick_ads_t').height() > 20 || jQuery('#quick_ads_b').height() > 20 || jQuery('#quick_ads_ts').height() > 20 || jQuery('#quick_ads_bs').height() > 20)
+			if ($('#quick_ads_l').height() > 20 || $('#quick_ads_r').height() > 20 || $('#quick_ads_t').height() > 20 || $('#quick_ads_b').height() > 20 || $('#quick_ads_ts').height() > 20 || $('#quick_ads_bs').height() > 20)
 			{
-				jQuery('#page_body_wrap_msg').css({'display':'none'});
-				jQuery('#page_body_wrap').css({'display':'block'});
+				$('#page_body_wrap_msg').css({'display':'none'});
+				$('#page_body_wrap').css({'display':'block'});
 			}
 		});
 		/* ]]> */

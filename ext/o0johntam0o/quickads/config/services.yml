@@ -2,20 +2,20 @@ services:
     o0johntam0o.quickads.listener:
         class: o0johntam0o\quickads\event\main_listener
         arguments:
-            - @controller.helper
-            - @template
-            - @user
-            - @config
-            - @request
-            - @dbal.conn
-            - %core.table_prefix%
-            - %core.root_path%
-            - %core.php_ext%
+            - '@controller.helper'
+            - '@template'
+            - '@user'
+            - '@config'
+            - '@request'
+            - '@dbal.conn'
+            - '%core.table_prefix%'
+            - '%core.root_path%'
+            - '%core.php_ext%'
         tags:
             - { name: event.listener }
 
     o0johntam0o.quickads.controller:
         class: o0johntam0o\quickads\controller\main
         arguments:
-            - @controller.helper
-            - @template
+            - '@controller.helper'
+            - '@template'

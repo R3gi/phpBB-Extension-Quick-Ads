@@ -10,27 +10,35 @@
 
 namespace o0johntam0o\quickads\acp;
 
+use phpbb\config\config;
+use phpbb\db\driver\driver_interface;
+use phpbb\json_response;
+use phpbb\log\log;
+use phpbb\request\request;
+use phpbb\template\template;
+use phpbb\user;
+
 class main_module
 {
 	/** @var ContainerInterface */
 	protected $phpbb_container;
 
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
 
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
 	
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
 
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
 
-	/** @var \phpbb\log\log */
+	/** @var log */
 	protected $log;
 
-	/** @var \phpbb\db\driver\driver_interface */
+	/** @var driver_interface */
 	protected $db;
 
 	/** @var string */
@@ -132,11 +140,7 @@ class main_module
 						
 						switch ($value)
 						{
-							case 0:
-								$ads_onpage_sql .= 'NULL,';
-							break;
-							
-							case 1:
+                            case 1:
 								$ads_onpage_sql .= 'faq,';
 							break;
 							
@@ -266,7 +270,7 @@ class main_module
 
 					if ($request->is_ajax())
 					{
-						$json_response = new \phpbb\json_response;
+						$json_response = new json_response;
 						$json_response->send(array(
 							'MESSAGE_TITLE'	=> $this->user->lang['INFORMATION'],
 							'MESSAGE_TEXT'	=> $this->user->lang['QUICK_ADS_DEL_ADS_DELETED'],

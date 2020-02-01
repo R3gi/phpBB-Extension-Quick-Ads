@@ -10,7 +10,9 @@
 
 namespace o0johntam0o\quickads\migrations;
 
-class v200 extends \phpbb\db\migration\migration
+use phpbb\db\migration\migration;
+
+class v200 extends migration
 {
 	public function effectively_installed()
 	{

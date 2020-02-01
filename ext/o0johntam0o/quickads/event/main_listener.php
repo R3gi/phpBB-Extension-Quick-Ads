@@ -10,6 +10,12 @@
 
 namespace o0johntam0o\quickads\event;
 
+use phpbb\config\config;
+use phpbb\controller\helper;
+use phpbb\db\driver\driver_interface;
+use phpbb\request\request;
+use phpbb\template\template;
+use phpbb\user;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -17,17 +23,17 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 */
 class main_listener implements EventSubscriberInterface
 {
-	/** @var \phpbb\controller\helper */
+	/** @var helper */
 	protected $helper;
-	/** @var \phpbb\template\template */
+	/** @var template */
 	protected $template;
-	/** @var \phpbb\user */
+	/** @var user */
 	protected $user;
-	/** @var \phpbb\config\config */
+	/** @var config */
 	protected $config;
-	/** @var \phpbb\request\request */
+	/** @var request */
 	protected $request;
-	/** @var \phpbb\db\driver\driver_interface */
+	/** @var driver_interface */
 	protected $db;
 	/** @var string */
 	protected $table_prefix;
@@ -36,7 +42,7 @@ class main_listener implements EventSubscriberInterface
 	/** @var string */
 	protected $php_ext;
 	
-	public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template, \phpbb\user $user, \phpbb\config\config $config, \phpbb\request\request $request, \phpbb\db\driver\driver_interface $db, $table_prefix, $root_path, $php_ext)
+	public function __construct(helper $helper, template $template, user $user, config $config, request $request, driver_interface $db, $table_prefix, $root_path, $php_ext)
 	{
 		$this->helper = $helper;
 		$this->template = $template;
@@ -251,12 +257,8 @@ class main_listener implements EventSubscriberInterface
 			case 2:
 				return 'scroll';
 			break;
-			
-			case 3:
-				return 'auto';
-			break;
-			
-			default:
+
+            default:
 				return 'auto';
 			break;
 		}
